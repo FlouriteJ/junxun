@@ -1,0 +1,34 @@
+﻿import re, os
+path_list=[]
+Path=input('Path:')
+if Path == '':
+	path_list.append(r'D:\政工\军装照\分班')
+else:
+	path_list.append(Path)
+
+all = 129
+token = True
+
+while path_list != []:
+	path_i=path_list.pop()
+	if not os.path.exists(path_i):
+		continue
+	path_filename=os.path.basename(path_i).lower()
+	if path_filename[-1:-4:-1][::-1] == "jpg":
+	
+		print(path_i)
+		print(os.path.join(os.path.dirname(path_i),str(all)+"_"+str(int(token))+".jpg"))
+		os.rename(path_i,os.path.join(os.path.dirname(path_i),str(all)+"_"+str(int(token))+".jpg"))	
+		
+		print(all,int(token))
+		if not token:
+			all+=1
+		token = not token
+		
+	try:
+		if os.path.isdir(path_i):
+			path_i_list=os.listdir(path_i)
+			if path_i_list != []:
+				path_list.extend([os.path.join(path_i, filename) for filename in path_i_list])
+	except:
+		pass
