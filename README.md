@@ -1,4 +1,6 @@
 # junxun
+Last year, I took part in the military training(Jun Xun) as an ideological work staff(Zheng Gong). During the training, I took lots of pictures of my company. Near the end of the training, I would like to hand out each picture to anyone who is in it. However, the pictures are so many(~2000) that I cannot recognize everyone in each of them on my own. So I tried on an API of Face++. After taking photos of each classmate and running the code, I gave everyone who is in my company about 30 pictures he/she may be in the picture. 
+
 2017年暑假军训时，作为政工拍摄照片，进行人脸检测后将它们分发给每个人。
 ## 详细计划
 制定拍摄定妆照名单
